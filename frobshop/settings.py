@@ -79,7 +79,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'haystack',
     'treebeard',
-
+'sorl.thumbnail',
     'django_tables2',
 ]
 
@@ -189,4 +189,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = location('public/static')
 STATICFILES_DIRS = (
     location('static/'),
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
